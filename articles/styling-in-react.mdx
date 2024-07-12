@@ -9,9 +9,11 @@ tags: react, styling, css, css-in-js, css-modules, tailwindcss, component-librar
 
 <BannerImage src="https://imparth7.github.io/imparth-blogs/images/styling-in-react.png" alt="Styling in React Banner" title="Styling in React" />
 
+# Styling in React
+
 Styling is an essential aspect of building React applications. You have various options for styling, ranging from traditional CSS to modern CSS-in-JS solutions and component libraries. Let's explore some popular approaches:
 
-# Traditional CSS
+## Traditional CSS
 
 You can use plain old CSS to style your ReactJS app. Create CSS files and import them into your components. This approach provides familiarity and flexibility but may lack some of the benefits of modern styling solutions.
 
@@ -35,7 +37,7 @@ const App = () => <button className="button">Click Me</button>;
 export default App;
 ```
 
-# Inline Styles
+## Inline Styles
 
 Inline styles in React are specified as an object with camelCase properties instead of a CSS string.
 
@@ -58,7 +60,7 @@ const App = () => (
 export default App;
 ```
 
-# CSS Modules
+## CSS Modules
 
 CSS Modules allow you to write CSS that's scoped locally to the component, preventing conflicts with styles in other parts of the application.
 
@@ -82,7 +84,7 @@ const Button = () => <button className={styles.button}>Click Me</button>;
 export default Button;
 ```
 
-# CSS-in-JS Solutions
+## CSS-in-JS Solutions
 
 CSS-in-JS libraries like styled-components, Emotion, and Linaria allow you to write CSS directly within your JavaScript code. This approach offers scoped styles, dynamic styling, and better component encapsulation.
 
@@ -110,7 +112,7 @@ const MyComponent = () => {
 };
 ```
 
-# Styling Libraries
+## Styling Libraries
 
 Several CSS-driven styling libraries are available for React developers. These libraries offer pre-styled and utility classes to quickly build attractive interfaces. Some popular options include TailwindCSS, and react-bootstrap. More on [Styling Libraries](https://devship.tech/react/styling-libraries)
 
@@ -129,7 +131,7 @@ const MyComponent = () => {
 };
 ```
 
-# Component Libraries
+## Component Libraries
 
 Several CSS-driven component libraries are available for React developers. These libraries offer pre-styled components to quickly build attractive interfaces. Some popular options include Chakra UI, MUI, Ant Design, Shadcn, MagicUI, NextUI, StyleX, TailwindUI, HeadlessUI, ArkUI, Reactstrap, Keep React and Aceternity UI. More on [Components Libraries](https://devship.tech/react/components-libraries)
 
@@ -147,6 +149,6 @@ const MyComponent = () => {
 };
 ```
 
-# Choosing the Right Approach
+## Choosing the Right Approach
 
 The choice of styling approach depends on your project requirements, team preferences, and design goals. Consider factors such as developer experience, maintainability, and performance when selecting a styling solution for your React application.
