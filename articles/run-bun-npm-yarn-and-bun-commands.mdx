@@ -1,0 +1,68 @@
+---
+slug: run-bun-npm-yarn-and-bun-commands
+title: "Run Bun! Command Guide"
+description: This guide provides a comprehensive comparison of package management commands across npm, yarn, and Bun. Learn how Bun simplifies and accelerates package management with its high-performance JavaScriptCore engine and Zig-based runtime.
+previewImage: https://imparth7.github.io/imparth-blogs/images/run-bun-npm-yarn-and-bun-commands.png
+keywords: bun, npm, yarn, package-management, command-guide, javascript
+tags: bun, npm, yarn, package-management, javascript, development
+---
+
+<BannerImage src="https://imparth7.github.io/imparth-blogs/images/run-bun-npm-yarn-and-bun-commands.png" alt="Run Bun! Command Guide Banner" title="Run Bun! Command Guide" />
+
+Bun is designed to start fast and run fast.
+
+Under the hood, Bun uses the JavaScriptCore engine, which Apple develops for Safari. In most cases, the startup and running performance is faster than V8, the engine used by Node.js and Chromium-based browsers. Its transpiler and runtime are written in Zig, a modern, high-performance language. On Linux, this translates into startup times 4x faster than Node.js.
+
+> If you want to get rid of all those different commands on each package manager I highly recommend installing SWPM and saying goodbye to package manager confusion. It will do all the command translations for you.
+
+This is a command guide for the npm (Node Package Manager), and yarn (Yet Another Resource Negotiator), to bun (JavaScript runtime).
+
+> Note: `<package>` follow this structure `<package[@latest|@#.#.#]>`
+
+## Package Commands
+
+| commands | npm | yarn | bun |
+| -------- | --- | ---- | --- |
+| clean cache | `npm cache clean` | `yarn cache clean` | `bun pm cache rm` |
+| install from `package.json` | `npm install` | `yarn [install]` | `bun install` |
+| don't read or generate a lockfile | `npm install --no-package-lock` | `yarn install --no-lockfile` | `bun install --no-save` |
+| lockfile is not updated | `npm ci` | `yarn install --frozen-lockfile` | `bun install --frozen-lockfile` |
+| add package | `npm install <package> [--location=global] ` | `yarn [global] add <package>` | `bun add <package> [--global]` |
+| add package as `dependencies` | `npm install <package>` | `yarn add <package>` | `bun add <package>` |
+| add package as `devDependencies` | `npm install <package> --save-dev` | `yarn add <package> --dev` | `bun add <package> --dev` |
+| add package as `optionalDependencies` | `npm install <package> --save-optional` | `yarn add <package> --optional` | `bun add <package> --optional` |
+| add exact version | `npm install <package> --save-exact` | `yarn add <package> --exact` | `bun add <package> --exact` |
+| remove package | `npm uninstall <package> [--location=global]` | `yarn [global] remove <package>` | `bun remove [<package>] [--global] ` |
+| remove package as `dependencies` | `npm uninstall <package>` | `yarn remove <package>` | `bun remove <package>` |
+| remove package as `devDependencies` | `npm uninstall <package> --save-dev` | `yarn remove <package> --dev` | `bun remove <package> --dev` |
+| remove package as `optionalDependencies` | `npm uninstall <package> --save-optional` | `yarn remove <package> --optional` | `bun remove <package> --optional` |
+| list all package at the top level | `npm list --depth 0 [--location=global]` | `yarn [global] list --depth 0` | `bun pm ls` |
+
+
+## Shared Commands
+
+| commands | npm | yarn | bun |
+| -------- | --- | ---- | --- |
+| init or create | `npm init` | `yarn init` | `bun init` |
+| run scripts | `npm run <script>` | `yarn run <script>` | `bun run <script>` |
+| run test | `npm test` | `yarn test` | `bun test` |
+| crate bundle package | `npm build` | `yarn build` | `bun build` |
+| link local package | `npm link [<folder>]` | `yarn link [<folder>]` | `bun link [<folder>]` |
+
+
+## Run Remotely
+
+| commands | npm | yarn | bun |
+| -------- | --- | ---- | --- |
+| run package | `npx <package>` | `yarn dlx <package>` | `bunx <package>` |
+
+---
+
+## CLI documentation
+[npm](docs.npmjs.com/)
+[yarn](classic.yarnpkg.com/)
+[bun](bun.sh/)
+
+## Conclusion
+
+Transitioning from npm and yarn to Bun offers developers faster startup times and streamlined commands, thanks to its use of the JavaScriptCore engine and Zig language. Bun simplifies package management while enhancing performance, promising a more efficient JavaScript development experience. Explore Bun's capabilities at [bun.sh](bun.sh) for optimized workflows and accelerated development.
