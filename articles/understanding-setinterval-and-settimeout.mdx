@@ -9,11 +9,11 @@ tags: javascript, js, timing, development, techniques
 
 <BannerImage src="https://imparth7.github.io/imparth-blogs/images/understanding-setinterval-and-settimeout.png" alt="Understanding `setInterval` and `setTimeout` Banner" title="Understanding `setInterval` and `setTimeout`" />
 
-# Understanding `setInterval` and `setTimeout`: A Comprehensive Guide
+# Understanding setInterval and setTimeout: A Comprehensive Guide
 
 In JavaScript, timing functions play a crucial role in creating dynamic and interactive web applications. Two of the most commonly used timing functions are `setInterval` and `setTimeout`. While they may seem similar, they serve different purposes and are used in distinct scenarios. In this blog post, we'll delve into the world of `setInterval` and `setTimeout`, exploring their syntax, examples, and use cases.
 
-## What is `setInterval`?
+## What is setInterval?
 
 `setInterval` is a timing function that executes a specified function repeatedly at a fixed interval (in milliseconds). The syntax for `setInterval` is as follows:
 
@@ -37,7 +37,7 @@ setInterval(() => {
 
 In this example, the `setInterval` function will execute the code inside the callback function every 1000 milliseconds (1 second), updating the clock with the current time.
 
-## What is `setTimeout`?
+## What is setTimeout?
 
 `setTimeout` is a timing function that executes a specified function once after a specified delay (in milliseconds). The syntax for `setTimeout` is similar to `setInterval`:
 
@@ -60,11 +60,11 @@ setTimeout(() => {
 
 In this example, the `setTimeout` function will execute the code inside the callback function after a delay of 5000 milliseconds (5 seconds), displaying the message "Hello, World!".
 
-## Clearing Timers: `clearInterval` and `clearTimeout`
+## Clearing Timers: clearInterval and clearTimeout
 
 When using `setInterval` and `setTimeout`, it's essential to clear the timers when they're no longer needed to avoid performance issues and memory leaks. Here's how to do it:
 
-### `clearInterval`
+### clearInterval
 
 `clearInterval` is used to cancel a timer created by `setInterval`. The syntax is as follows:
 
@@ -87,7 +87,7 @@ setTimeout(() => {
 
 In this example, we create an interval timer that logs "Hello, World!" every second. After 5 seconds, we clear the timer using `clearInterval`.
 
-### `clearTimeout`
+### clearTimeout
 
 `clearTimeout` is used to cancel a timer created by `setTimeout`. The syntax is as follows:
 
@@ -112,17 +112,17 @@ In this example, we create a timeout timer that logs "Hello, World!" after 5 sec
 
 So, what's the main difference between `setInterval` and `setTimeout`? Here are the key takeaways:
 
-- **Repetition**: `setInterval` executes a function repeatedly at a fixed interval, while `setTimeout` executes a function once after a specified delay.
-- **Interval vs. Delay**: `setInterval` uses an interval (the time between each execution), while `setTimeout` uses a delay (the time before the first execution).
-- **Use Cases**: `setInterval` is suitable for ongoing tasks, such as animations, polling, or updating data in real-time. `setTimeout` is better suited for one-time tasks, like displaying a message or hiding an element.
+- **Repetition**: setInterval executes a function repeatedly at a fixed interval, while setTimeout executes a function once after a specified delay.
+- **Interval vs. Delay**: setInterval uses an interval (the time between each execution), while setTimeout uses a delay (the time before the first execution).
+- **Use Cases**: setInterval is suitable for ongoing tasks, such as animations, polling, or updating data in real-time. setTimeout is better suited for one-time tasks, like displaying a message or hiding an element.
 
 ## Best Practices and Common Pitfalls
 
 Here are some tips to keep in mind when using `setInterval` and `setTimeout`:
 
-- **Clear timers**: Use `clearInterval` and `clearTimeout` to cancel timers when they're no longer needed, to avoid performance issues and memory leaks.
+- **Clear timers**: Use clearInterval and clearTimeout to cancel timers when they're no longer needed, to avoid performance issues and memory leaks.
 - **Mind the interval**: Be cautious when setting short intervals, as they can cause performance issues or even crashes.
-- **Use setTimeout for one-time tasks**: If you only need to execute a function once, use `setTimeout` instead of `setInterval`.
+- **Use setTimeout for one-time tasks**: If you only need to execute a function once, use setTimeout instead of setInterval.
 - **Avoid multiple timers**: Be careful not to create multiple timers with the same interval or delay, as this can lead to unexpected behavior.
 
 ## Conclusion
